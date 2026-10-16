@@ -116,7 +116,7 @@ export function registerShortsTools(
 
   server.tool(
     "get_shorts_analytics",
-    "Queries the YouTube Analytics API for the authenticated channel restricted to Shorts, by forcing filters=creatorContentType==SHORTS on top of the supplied start_date/end_date/metrics/dimensions. Read-only; no mutations. Requires OAuth with the yt-analytics.readonly scope and uses YouTube Analytics API quota (separate from the Data API). Returns the raw Analytics response as pretty-printed JSON (column headers plus rows). Use this for Shorts-only performance reporting; use query_channel_analytics for whole-channel or custom-filtered reports, and list_my_shorts to enumerate the Shorts themselves.",
+    "Queries the YouTube Analytics API for the authenticated channel restricted to Shorts, by forcing filters=creatorContentType==shorts on top of the supplied start_date/end_date/metrics/dimensions. Read-only; no mutations. Requires OAuth with the yt-analytics.readonly scope and uses YouTube Analytics API quota (separate from the Data API). Returns the raw Analytics response as pretty-printed JSON (column headers plus rows). Use this for Shorts-only performance reporting; use query_channel_analytics for whole-channel or custom-filtered reports, and list_my_shorts to enumerate the Shorts themselves.",
     getShortsAnalyticsSchema,
     async (args) => {
       const res = await client.analyticsQuery({
@@ -124,7 +124,7 @@ export function registerShortsTools(
         endDate: args.end_date,
         metrics: args.metrics,
         dimensions: args.dimensions,
-        filters: "creatorContentType==SHORTS",
+        filters: "creatorContentType==shorts",
         sort: args.sort,
         maxResults: args.max_results,
       });

@@ -124,7 +124,7 @@ Stdio mode skips the OAuth-token preflight check — the server boots even witho
 ### Shorts
 
 - `list_my_shorts`: find Shorts in recent uploads (filters by duration ≤60s).
-- `get_shorts_analytics`: YouTube Analytics query restricted to Shorts (`creatorContentType==SHORTS`).
+- `get_shorts_analytics`: YouTube Analytics query restricted to Shorts (`creatorContentType==shorts`).
 
 ### Playlists
 
@@ -192,7 +192,7 @@ Shipped:
 
 - Videos: list, get, update metadata, delete with title-match confirm guard.
 - Captions: upload, list, delete.
-- Shorts: `list_my_shorts` (duration filter) and `get_shorts_analytics` (creatorContentType==SHORTS).
+- Shorts: `list_my_shorts` (duration filter) and `get_shorts_analytics` (creatorContentType==shorts).
 - Playlists: create, add-to.
 - Comments: list, reply, moderate.
 - Analytics: channel analytics query.

@@ -306,8 +306,8 @@ export class YouTubeClient {
   }): Promise<AnalyticsResponse> {
     return this.analyticsGet<AnalyticsResponse>("/reports", {
       ids: "channel==MINE",
-      "start-date": params.startDate,
-      "end-date": params.endDate,
+      startDate: params.startDate,
+      endDate: params.endDate,
       metrics: params.metrics,
       dimensions: params.dimensions,
       filters: params.filters,
