@@ -78,7 +78,7 @@ Or point your MCP gateway at the Streamable HTTP endpoint.
 | `--client-id` | `YOUTUBE_CLIENT_ID` | (none) | Alternative to the secret file |
 | `--client-secret` | `YOUTUBE_CLIENT_SECRET` | (none) | Alternative to the secret file |
 | `--token-file` | `YOUTUBE_TOKEN_FILE` | `~/.config/youtube-mcp/token.json` | Refresh token storage |
-| `--host` | `MCP_HOST` | `0.0.0.0` | Bind host (HTTP mode only) |
+| `--host` | `MCP_HOST` | `127.0.0.1` | Bind host (HTTP mode only). Set `0.0.0.0` to accept connections from other machines; the Docker image does this. |
 | `--port` | `MCP_PORT` | `9120` | Bind port (HTTP mode only) |
 | `--stdio` | `MCP_TRANSPORT=stdio` | (unset) | Speak MCP over stdio instead of HTTP. Use when launched as a subprocess by a stdio-first MCP client (Claude Desktop, mcp-inspector). |
 | `--comfyui-url` | `COMFYUI_URL` | *(unset, bridge disabled)* | ComfyUI HTTP URL for bridge tools |

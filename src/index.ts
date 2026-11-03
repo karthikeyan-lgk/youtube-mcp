@@ -58,7 +58,7 @@ if (!stored) {
   );
 }
 
-const host = values.host ?? process.env.MCP_HOST ?? "0.0.0.0";
+const host = values.host ?? process.env.MCP_HOST ?? "127.0.0.1";
 const port = Number(values.port ?? process.env.MCP_PORT ?? "9120");
 const comfyUIUrl = values["comfyui-url"] ?? process.env.COMFYUI_URL;
 const comfyUIDefaultCkpt =
@@ -155,7 +155,7 @@ function printHelp(): void {
       "                                 (env: YOUTUBE_TOKEN_FILE)",
       "",
       "Server flags:",
-      "  --host <host>                  Bind host (default: 0.0.0.0, env: MCP_HOST)",
+      "  --host <host>                  Bind host (default: 127.0.0.1, env: MCP_HOST)",
       "  --port <port>                  Bind port (default: 9120, env: MCP_PORT)",
       "  --comfyui-url <url>            ComfyUI HTTP URL for the thumbnail bridge tool.",
       "                                 When unset, generate_and_set_thumbnail is disabled. (env: COMFYUI_URL)",
